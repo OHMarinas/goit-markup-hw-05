@@ -75,6 +75,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
     line-height: 1.167em;
     letter-spacing: 0.54px;
     text-transform: uppercase;  
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-header-span-studio {
@@ -85,6 +86,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
     line-height: 1.167em;
     letter-spacing: 0.54px;
     text-transform: uppercase;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-header-nav {
@@ -104,6 +106,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
     font-weight: 500;
     line-height: 1.5em;
     letter-spacing: 0.32px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-header-nav-item {
@@ -119,6 +122,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
     position: absolute;
     left: 0;
     bottom: -25px;
+    transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-header-nav-item:hover .main-header-nav-link::after {
@@ -138,6 +142,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
     font-size: 16px;
     line-height: 1.5em;
     letter-spacing: 0.32px;
+    transition: coloer 250ms cubic-bezier(0.4, 0, 0.2, 1);    
 }
 
 .main-header-web:hover .main-header-span-web {
@@ -156,15 +161,20 @@ h1, h2, h3, h4, h5, h6, p, ul {
     color: var(--oceancolor);
 }
 
-.main-header-nav-link.active { 
+.main-header-nav-link.active {
     color: var(--oceancolor);
+}
+
+.main-header-nav-link.active::after { 
+    color: var(--oceancolor);
+    width: 100%;
 }
 
 .main-header-nav-item:hover .main-header-nav-link, .main-header-nav-link:focus  {
     color: var(--oceancolor);
 }
 
-.main-header-address a:hover, .main-header-address a:focus {
+.main-header-address-item a:hover, .main-header-address-item a:focus {
     color: var(--oceancolor);
 }
 
@@ -255,6 +265,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
     padding: 12px 24px;
     font-family: inherit;
     outline: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);        
 }
 
 .options-list {
@@ -264,12 +275,10 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 .options-item-button:hover, .options-item-button:focus {
     color: var(--whitecolor);
-    cursor: pointer;
-    border-radius: 4px;
     background: var(--oceancolor);
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
-    padding: 12px 24px;
     border-color: var(--oceancolor);
+    cursor: pointer;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 
 .section.projects{
@@ -342,11 +351,11 @@ overflow: hidden;
     border: 1px solid var(--cornflowercolor);
     border-top: unset;
     background: var(--whitecolor); 
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-item:hover .projects-item-title-container {
     box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.12);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-item-title {
@@ -407,6 +416,7 @@ overflow: hidden;
     outline: none;
     border: unset;
     padding: 16px 32px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .studio-button:hover, .studio-button:focus {
@@ -506,6 +516,8 @@ overflow: hidden;
 
 .svg {
     fill: currentColor;
+    transition: color 125ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .features-item-icon-box {
@@ -531,19 +543,18 @@ overflow: hidden;
 
 .team-icon-link {
     border-radius: 50%;
-    background: var(--iriscolor);
+    background-color: var(--iriscolor);
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40px; 
     height: 40px;
     padding: 8px;
-}   
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }   
 
 .team-icon-link:hover, .team-icon-link:focus {
-    background: var(--oceancolor);
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
-    border-color: var(--oceancolor);
+    background-color: var(--oceancolor);
     outline-style: none;
  }
 
@@ -567,18 +578,21 @@ overflow: hidden;
     width: 168px;
     border-radius: 4px;
     border: 1px solid var(--lightslatecolor);
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 16px;
     padding-bottom: 16px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
-
-.customer-icon-link {
-    color: var(--lightslatecolor);
-}
 
 .customer-item:hover {
     border-color: var(--oceancolor);
+}
+
+.customer-icon-link {
+    color: var(--lightslatecolor);
+    transition: color 125ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-item:hover .customer-icon-link {
@@ -587,7 +601,7 @@ overflow: hidden;
 
 .customer-icon-link:focus {
     color: var(--oceancolor);
-    outline: none;
+    outline-style: none;
 }
 
 .socialmedia-icon-list {
@@ -616,19 +630,18 @@ overflow: hidden;
 .socialmedia-icon-link {
     border-radius: 50%;
     background: var(--iriscolor);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
     padding: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socialmedia-icon-link:hover, .socialmedia-icon-link:focus  {
-    background: var(--greencolor);
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
-    border-color: var(--greencolor);
-    outline: none;
+    background-color: var(--greencolor);
+    outline-style: none;
 }
 /*Icons Style Done*/
 
